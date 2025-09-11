@@ -8,8 +8,8 @@ const mostrarTiempo = document.getElementById("time-count");
 const mostrarPuntos = document.getElementById("score-count");
 
 //Sonidos
-const sonidoGolpe = new Audio('/sound/whack.mp3');
-const musicaFondo = new Audio('/sound/music.mp3');
+const sonidoGolpe = new Audio('/topos/sound/whack.mp3');
+const musicaFondo = new Audio('/topos/sound/music.mp3');
 musicaFondo.loop = true; // repite musica en bucle
 musicaFondo.volume = 0.3; // Volumen de la musica establecido
 
