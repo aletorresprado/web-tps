@@ -13,7 +13,6 @@ Proyectos prácticos con aplicaciones reales
 Responsive design adaptable a diferentes dispositivos
 
 📂 Estructura del Proyecto
-text
 web-tps/
 ├── 📁 proyecto-1/          # Primer trabajo práctico
 │   ├── index.html
@@ -36,27 +35,24 @@ https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascri
 
 https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white
 
-📦 Instalación y Uso
+1. 📦 Instalación y Uso
 Clona el repositorio:
-
-bash
 git clone https://github.com/aletorresprado/web-tps.git
-Navega al directorio del proyecto:
+
+2. Navega al directorio del proyecto:
 
 bash
 cd web-tps
-Abre el proyecto que desees visualizar:
+
+3. Abre el proyecto que desees visualizar:
 
 Abre el archivo index.html en tu navegador favorito
 
 O utiliza un servidor local para mejor experiencia:
 
-bash
-# Con Python
-python -m http.server 8000
-
 # Con Node.js (si tienes http-server instalado)
 npx http-server
+
 🌐 Demo en Vivo
 Algunos proyectos pueden estar desplegados en plataformas como:
 
