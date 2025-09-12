@@ -14,6 +14,18 @@ Este espacio contiene una colección de proyectos y ejercicios prácticos desarr
 - Responsive design adaptable a diferentes dispositivos  
 
 ---
+🌐 Demo en Vivo
+🔗 Ver demostración en vivo: https://atp-tps.netlify.app/
+
+Algunos proyectos pueden estar desplegados en plataformas como:
+
+GitHub Pages
+
+Netlify
+
+Vercel
+
+---
 
 ## 📂 Estructura del Proyecto
 ```bash
