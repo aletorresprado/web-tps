@@ -1,18 +1,21 @@
-🌟 Web TPs - Proyectos de Tecnologías Web
-¡Bienvenido/a al repositorio de Trabajos Prácticos de Tecnologías Web! Este espacio contiene una colección de proyectos y ejercicios prácticos desarrollados para explorar y dominar diversas tecnologías web modernas.
+# 🌟 Web TPs - Proyectos de Tecnologías Web
 
-🚀 Características
-Diseños modernos y atractivos
+¡Bienvenido/a al repositorio de **Trabajos Prácticos de Tecnologías Web**!  
+Este espacio contiene una colección de proyectos y ejercicios prácticos desarrollados para explorar y dominar diversas tecnologías web modernas.
 
-Código limpio y bien estructurado
+---
 
-Tecnologías variadas (HTML, CSS, JavaScript y más)
+## 🚀 Características
+- Diseños modernos y atractivos  
+- Código limpio y bien estructurado  
+- Tecnologías variadas (**HTML, CSS, JavaScript y más**)  
+- Proyectos prácticos con aplicaciones reales  
+- Responsive design adaptable a diferentes dispositivos  
 
-Proyectos prácticos con aplicaciones reales
+---
 
-Responsive design adaptable a diferentes dispositivos
-
-📂 Estructura del Proyecto
+## 📂 Estructura del Proyecto
+```bash
 web-tps/
 ├── 📁 proyecto-1/          # Primer trabajo práctico
 │   ├── index.html
@@ -26,6 +29,8 @@ web-tps/
     ├── components/
     ├── pages/
     └── main.js
+
+
 🛠️ Tecnologías Utilizadas
 https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
 
@@ -78,9 +83,19 @@ Push a la rama (git push origin feature/AmazingFeature)
 Abre un Pull Request
 
 📞 Contacto
-Alejandro Torres - @aletorresprado
+
+👤 Alejandro Torres Prado
+🔗 GitHub: @aletorresprado
 
 📄 Licencia
-Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
 
-⭐ ¡Si te gusta este repositorio, no olvides darle una estrella!
+Este proyecto está bajo la licencia MIT.
+Consultá el archivo LICENSE
+ para más detalles.
+
+
+---
+
+Ahora se ve ordenado, con **listas claras, secciones bien separadas y badges visibles** 🎉.  
+
+👉 ¿Querés que le meta también un **banner gráfico arriba** (tipo portada con el nombre del repo) para que quede todavía más pro en GitHub?
