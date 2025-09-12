@@ -1,4 +1,5 @@
 # 🌟 Web TPs - Proyectos de Tecnologías Web
+![Hola Mundo!](https://github.com/aletorresprado/web-tps/blob/main/imgReadme.png)
 
 ¡Bienvenido/a al repositorio de **Trabajos Prácticos de Tecnologías Web**!  
 Este espacio contiene una colección de proyectos y ejercicios prácticos desarrollados para explorar y dominar diversas tecnologías web modernas.
