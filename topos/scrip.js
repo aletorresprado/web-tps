@@ -6,6 +6,7 @@ const btnIniciar =  document.getElementById("start-game");
 const btnReiniciar = document.getElementById("restart-game");
 const mostrarTiempo = document.getElementById("time-count");
 const mostrarPuntos = document.getElementById("score-count");
+const btnHighScores = document.getElementById("high-scores");
 
 //Sonidos
 const sonidoGolpe = new Audio('/topos/sound/whack.mp3');
@@ -14,15 +15,16 @@ musicaFondo.loop = true; // repite musica en bucle
 musicaFondo.volume = 0.3; // Volumen de la musica establecido
 
 // Variables del juego
-let tiempo = 20;
+let tiempo = 15;
 let puntos = 0;
 let temporizador;
 let aparicionTopos;
+const STORAGE_KEY = 'high-scores';
 
 //Iniciar juego
 function iniciarJuego(){
     // reiniciar los valores
-    tiempo = 20;
+    tiempo = 15;
     puntos = 0;
     mostrarPuntos.textContent = puntos;
     mostrarTiempo.textContent = tiempo;
@@ -41,10 +43,10 @@ function iniciarJuego(){
         if(tiempo <= 0) {
             terminarJuego();
         }
-    }, 1000)
+    }, 1200)
 
     //comienza a mostrar topos
-    aparicionTopos = setInterval(mostrarTopo, 600);
+    aparicionTopos = setInterval(mostrarTopo, 500);
 }
 
 // mostrar topo aleatoriamente
@@ -74,8 +76,101 @@ function terminarJuego (){
     clearInterval(aparicionTopos);
     musicaFondo.pause();
     musicaFondo.currentTime = 0; // reiniciar la musica
+
+//preguntar si quiere gurdar el score
+    Swal.fire({
+        title:'Juego Terminado!',
+        text: `Conseguiste ${puntos}! ¿Quieres guardar tu record?`,
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonText: 'Si, guardar',
+        cancelButtonText: 'No, gracias',
+        background: '#7CC809',
+        customClass: {
+                    confirmButton: 'my-confirm-button',
+                    cancelButton: 'my-cancel-button',
+                    input: 'my-input'
+                },
+    }).then((result) => {
+        if(result.isConfirmed){
+            Swal.fire({
+                title: 'Ingresa tu nombre',
+                input: 'text',
+                inputPlaceholder: 'Tu nombre o alias',
+                background: '#7CC809',
+                customClass: {
+                    confirmButton: 'my-confirm-button',
+                    cancelButton: 'my-cancel-button',
+                    input: 'my-input'
+                },
+                showCancelButton: true,
+                inputValidator:(value) => {
+                    if(!value){
+                        return ' Necesitas ingresar tu nombre'
+                    }
+                }
+            }).then((result) => {
+                if(result.isConfirmed){
+                    guardarRecord(result.value, puntos);
+                    Swal.fire({
+            title: '¡Guardado!',
+            text: 'Tu record ha sido guardado',
+            icon: 'success',
+            background: '#7CC809',
+            customClass: {
+                confirmButton: 'my-confirm-button',
+                    cancelButton: 'my-cancel-button',
+                    input: 'my-input'
+            }
+        });   
+                }
+            })
+        }
     btnReiniciar.style.display = "block";
+    })
 }
+// Aqui vamos a guardar los scores
+    function guardarRecord(nombre, puntuacion){
+        const scores = obtenerRecords()
+
+        scores.push({nombre, puntuacion, fecha: new Date().toLocaleDateString()})
+        scores.sort((a, b) => b.puntuacion - a.puntuacion);
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(scores));
+    }
+
+  // obtener todos los record guardados
+  
+function obtenerRecords(){
+    const scores = localStorage.getItem(STORAGE_KEY);
+    return scores ? JSON.parse(scores): [];
+}
+
+//Mostrar el popup con todos los records guardados
+
+function mostrarPanelRecords (){
+    const scores = obtenerRecords();
+
+    const scoresList = scores.map((score, index) => {
+        return `${index + 1}. ${score.nombre}: ${score.puntuacion} pts\n (${score.fecha})`;
+    }).join(`\n\n`);
+
+    Swal.fire({
+        title: 'High Scores 🏆',
+        background: '#7CC809',
+        html: `<pre style="text-align: left; font-family: inherit;"> ${scoresList || ' No hay records guardados'}</pre>`,
+        icon: 'info',
+        confirmButtonText: 'Cerrar',
+        customClass: {
+                    confirmButton: 'my-cerrar-button',
+                    input: 'my-input'
+                },
+        customClass: {
+            popup: 'score-popup',
+            content: 'score-content'
+        }
+    });
+}
+btnHighScores.addEventListener('click', mostrarPanelRecords);
 
 //EVENTOS
 //Boton de inicio

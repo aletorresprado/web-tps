@@ -21,7 +21,7 @@ img {
 body {
   font-family: "Paytone One", sans-serif;
   background-color: #769c38;
-  background-image:url("images/cesped.png");
+  background-image:url("/topos/images/cesped.png");
 }
 
 .count {
@@ -40,7 +40,9 @@ body {
 }
 
 #start-game,
-#restart-game {
+#restart-game,
+.game-button
+ {
   padding: 8px 15px;
   border-radius: 20px;
   border: none;
@@ -53,7 +55,9 @@ body {
 }
 
 #start-game:hover,
-#restart-game:hover {
+#restart-game:hover,
+.game-button:hover 
+{
   background-color: #74d691;
   color: #0d5322;
 }
@@ -118,6 +122,87 @@ body {
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
+}
+/*Estilos para el popup de scores*/
+.score-popup{
+  width: 400px;
+}
+
+.score-content pre {
+  margin: 1em auto;
+  padding: 1em;
+  background: rgba(0,0, 0, 0.5);
+  border-radius: 8xp;
+  white-space: pre-wrap;
+}
+
+ /* Estilos para los botones de SweetAlert */
+        .my-confirm-button {
+            background: linear-gradient(to right, #00b09b, #96c93d) !important;
+            border: none !important;
+            border-radius: 50px !important;
+            padding: 10px 25px !important;
+            font-weight: 600 !important;
+            box-shadow: 0 4px 15px rgba(150, 201, 61, 0.3) !important;
+        }
+        
+        .my-cancel-button {
+            background: linear-gradient(to right, #ff416c, #ff4b2b) !important;
+            border: none !important;
+            border-radius: 50px !important;
+            padding: 10px 25px !important;
+            font-weight: 600 !important;
+            box-shadow: 0 4px 15px rgba(255, 65, 108, 0.3) !important;
+        }
+        .my-cerrar-button {
+            background: linear-gradient(to right, #ff416c, #ff4b2b) !important;
+            border: none !important;
+            border-radius: 50px !important;
+            padding: 10px 25px !important;
+            font-weight: 600 !important;
+            box-shadow: 0 4px 15px rgba(255, 65, 108, 0.3) !important;
+        }
+        
+        .my-input {
+            border-radius: 10px !important;
+            border: 2px solid #ddd !important;
+            padding: 12px 15px !important;
+            transition: border-color 0.3s !important;
+        }
+        
+        .my-input:focus {
+            border-color: #4776E6 !important;
+            box-shadow: 0 0 0 3px rgba(71, 118, 230, 0.2) !important;
+        }
+
+/* Ícono Success en blanco */
+.swal2-icon.swal2-success {
+  border-color: white !important;
+  color: white !important;
+}
+.swal2-success-line-tip,
+.swal2-success-line-long,
+.swal2-success-ring {
+  background-color: white !important;
+  border-color: white !important;
+}
+
+/* Ícono Info en blanco */
+.swal2-icon.swal2-info {
+  border-color: white !important;
+  color: white !important;
+}
+.swal2-icon.swal2-info [class^='swal2-info-'] {
+  background-color: white !important;
+}
+
+/* Ícono Question en blanco */
+.swal2-icon.swal2-question {
+  border-color: white !important;
+  color: white !important;
+}
+.swal2-icon.swal2-question mark {
+  color: white !important;
 }
 
 /* Media queries para dispositivos más pequeños */
