@@ -95,7 +95,3 @@ Consultá el archivo LICENSE
 
 
 ---
-
-Ahora se ve ordenado, con **listas claras, secciones bien separadas y badges visibles** 🎉.  
-
-👉 ¿Querés que le meta también un **banner gráfico arriba** (tipo portada con el nombre del repo) para que quede todavía más pro en GitHub?
