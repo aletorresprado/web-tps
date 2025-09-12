@@ -44,9 +44,4 @@ web-tps/
 👤 Alejandro Torres Prado
 🔗 GitHub: @aletorresprado
 
-📄 Licencia
-
-Este proyecto está bajo la licencia MIT.
-Consultá el archivo LICENSE
-para más detalles.
---
+---
