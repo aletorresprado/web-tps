@@ -30,6 +30,7 @@ web-tps/
     ├── pages/
     └── main.js
 
+```
 
 ## 🛠️ Tecnologías Utilizadas
 
