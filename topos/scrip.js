@@ -51,21 +51,28 @@ function iniciarJuego(){
 
 // mostrar topo aleatoriamente
 function mostrarTopo(){
-    //si el juego termino no tiene que hacer nada
-    if(tiempo <= 0){
-        return; // corta la ejecucion
-    }
+    if(tiempo <= 0) return;
 
-    // seleecionar un hoyo aleatorio
     const posicionAleatoria = Math.floor(Math.random() * hoyos.length);
-    const topo = hoyos[posicionAleatoria].querySelector(".mole");
+    const hoyo = hoyos[posicionAleatoria];
 
-    //mostrar el topo
-    topo.classList.add("mole-appear");
-    
-    //ocultar topo despues de 1 segundo
+    // 50% topo, 50% conejo
+    const esTopo = Math.random() < 0.5;
+    const animal = esTopo 
+        ? hoyo.querySelector(".mole") 
+        : hoyo.querySelector(".conejo");
+
+    const claseAparecer = esTopo ? "mole-appear" : "conejo-appear";
+    const claseOcultar = esTopo ? "mole-hide" : "conejo-hide";
+
+    // mostrar
+    animal.classList.remove(claseOcultar);
+    animal.classList.add(claseAparecer);
+
+    // ocultar después de 1s
     setTimeout(() => {
-        topo.classList.remove("mole-appear");
+        animal.classList.remove(claseAparecer);
+        animal.classList.add(claseOcultar);
     }, 1000);
 }
 
@@ -206,5 +213,9 @@ btnReiniciar.addEventListener('click', () => {
         //eliminar el texto despues de 400ms
         setTimeout(() => texto.remove(), 400);
         
+    }
+    if (e.target.classList.contains('conejo-clicked')) {
+        puntos--; // por ejemplo, resta un punto
+        mostrarPuntos.textContent = puntos;
     }
 })
