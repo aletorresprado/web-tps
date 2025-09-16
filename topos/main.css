@@ -271,6 +271,14 @@ body {
     width: 100px;
   }
 
+  .conejo-hide {
+    width: 40px;
+  }
+
+  .conejo-appear {
+    width: 100px;
+  }
+
   .bush {
     width: 100px;
   }
@@ -309,6 +317,14 @@ body {
   }
 
   .mole-appear {
+    width: 80px;
+  }
+
+  .conejo-hide {
+    width: 30px;
+  }
+
+  .conejo-appear {
     width: 80px;
   }
 
