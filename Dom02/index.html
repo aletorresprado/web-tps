@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 2</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+<div> 
+     <h2>TPs 5 Ej. 2 | Crea una clase llamada "Persona"</h2>
+
+    <form id="formPersona">
+        
+    <div class="form-group">
+        <label for="edad">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+    </div>
+
+    <div class="form-group">
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" required>
+    </div>
+
+     <div class="form-group">
+        <label for="dni">DNI:</label>
+        <input type="number" id="dni" name="dni" required>
+     </div>    
+
+    <div class="form-group">
+       <label for="sexo">Sexo:</label>
+                <select id="sexo" required>
+                    <option value="">Seleccione</option>
+                    <option value="M">Masculino</option>
+                    <option value="F">Femenino</option>
+                </select>
+    </div>  
+
+     <div class="form-group">
+        <label for="peso">Peso:</label>
+        <input type="number" id="peso" name="peso" required>
+     </div>
+
+    <div class="form-group">
+        <label for="altura">Altura:</label>
+        <input type="number" id="altura" step="0.01" min="0.5" max="2.5" required>
+    </div>
+
+     <div class="form-group">
+        <label for="nacimiento">Año de nacimiento:</label>
+        <input type="number" id="nacimiento" name="nacimiento" required>
+    </div>    
+
+         <button type="submit">Enviar Datos</button>
+        </form>
+        
+        <div class="resultados" id="resultados">
+            <h2>Resultados</h2>
+            <div class="datos-persona" id="datosPersona"></div>
+        </div>
+    </div>
+  <script src="/script.js"></script>  
+</body>
+</html>
